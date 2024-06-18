@@ -13,7 +13,7 @@ function Footer() {
             {/* Div no meio */}
             <div className="font-roboto text-center mx-auto">
                 <Link to="/sobre">Sobre</Link><br />
-                <a href="">Contato</a><br />
+                <Link to="/contato">Contato</Link><br />
                 <a href="">Políticas de privacidade</a>
             </div>
 

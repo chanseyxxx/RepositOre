@@ -3,15 +3,17 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import robo from "./assets/robo.png";
 import lego from "./assets/lego.png";
+import './index.css';
 
 function Homepage() {
     return (
+        
         <>
             {/* Header */}
-            <div className="flex justify-between items-center px-8 py-4">
+            <div className="flex justify-between items-center px-8 py-4 h-screen">
                 <div className="text-center mr-6 ml-9">
                 <h1 className="font-jura text-5xl lg:text-7xl">RepositORE</h1>
-                    <p className="font-roboto text-secondary text-sm lg:text-base">Sua plataforma de aprendizagem em Robótica Educacional</p>
+                    <p className=" typing-effect font-roboto text-secondary text-sm lg:text-base">Sua plataforma de aprendizagem em Robótica Educacional</p>
                 </div>
                 <div className="flex-shrink-0">
                     <img src={robo} alt="Robô" />
@@ -19,7 +21,7 @@ function Homepage() {
             </div>
 
             {/* Section: Explorando o acervo */}
-            <div className="flex justify-center items-center px-8 py-4 mb-5">
+            <div id="explorando-acervo" className=" flex justify-center items-center px-8 py-4 mb-5">
                 <div className="text-center mr-6 ml-9">
                     <h2 className="font-jura text-5xl">Explorando o acervo</h2>
                     <p className="font-roboto text-secondary text-sm lg:text-base">Lista de Objetos de Robótica</p>

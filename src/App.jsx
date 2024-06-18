@@ -8,6 +8,7 @@ import Sobre from './Sobre';
 import Login from './Login'; 
 import Signup from './Signup'; 
 import Contato from './Contato'; 
+import Politicas from './Politicas';
 
 function App() {
     console.log('Renderizando App...'); 
@@ -22,6 +23,7 @@ function App() {
                     <Route path="/login" element={<Login />} />
                     <Route path="/signup" element={<Signup />} />
                     <Route path="/contato" element={<Contato />} />
+                    <Route path="/politicas" element={<Politicas />} />
                 </Routes>
                 <Footer />
             </div>

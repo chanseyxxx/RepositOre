@@ -14,7 +14,7 @@ function Footer() {
             <div className="font-roboto text-center mx-auto">
                 <Link to="/sobre">Sobre</Link><br />
                 <Link to="/contato">Contato</Link><br />
-                <a href="">Políticas de privacidade</a>
+                <Link to="/politicas">Políticas de privacidade</Link><br />
             </div>
 
         

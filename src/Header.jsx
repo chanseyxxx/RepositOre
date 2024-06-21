@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function Header() {
-    const handleScrollToList = () => {
+function Header(props) {
+    const handleScrollToList = (event) => {
+        event.preventDefault(); // Prevent default anchor link behavior
         // Verificar se estamos na página inicial
         if (window.location.pathname === '/') {
             // Encontrar a posição da seção "Explorando o acervo"
@@ -16,7 +17,6 @@ function Header() {
             }
         } else {
             window.location.href = '/';
-            
         }
     };
 
@@ -33,10 +33,17 @@ function Header() {
                 <Link to="/sobre">Sobre Nós</Link>
                 <Link to="/contato">Contato</Link>
             </div>
-            <div className="justify-center space-x-3 font-roboto font-light">
-                <Link to="/login">Entrar</Link>
-                <Link to="/signup">Criar Conta</Link>
-            </div>
+            {props.isLoggedIN ? (
+                <div className="justify-center space-x-3 font-roboto font-light">
+                    <Link to="/forms">Cadastrar objeto</Link>
+                    <Link to="/profile">Perfil</Link>
+                </div>
+            ) : (
+                <div className="justify-center space-x-3 font-roboto font-light">
+                    <Link to="/login">Entrar</Link>
+                    <Link to="/signup">Criar Conta</Link>
+                </div>
+            )}
         </header>
     );
 }
